@@ -1,0 +1,17 @@
+*.pyc
+.settings/org.eclipse.core.resources.prefs
+.pydevproject
+conf/.settings.py.swp
+*.swp
+.DS_Store
+static/pics
+.idea
+tags
+*.txt
+.project
+.classpath
+.settings/
+target/
+*.log
+.idea
+*.iml
