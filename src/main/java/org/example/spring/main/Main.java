@@ -3,6 +3,7 @@ package org.example.spring.main;
 import org.example.spring.bean.BeanFactory;
 import org.example.spring.bean.ComponentScan;
 import org.example.spring.service.User;
+import sun.jvm.hotspot.debugger.arm.ARMThreadContext;
 
 @ComponentScan("org.example.spring.service")
 public class Main {
