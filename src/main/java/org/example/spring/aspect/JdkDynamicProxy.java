@@ -21,6 +21,7 @@ public class JdkDynamicProxy implements DynamicProxy, InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Aspect aspect = null;
+        method = target.getClass().getMethod(method.getName());
         Annotation[] annotations = method.getDeclaredAnnotations();
         for (Annotation annotation : annotations) {
             aspect = aspectMap.get(annotation.annotationType());
