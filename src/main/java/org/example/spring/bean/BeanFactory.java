@@ -1,7 +1,7 @@
 package org.example.spring.bean;
 
 import org.example.spring.aspect.Aspect;
-import org.example.spring.aspect.JdkDynamicProxy;
+import org.example.spring.aspect.CglibDynamicProxy;
 import org.example.spring.util.ClassUtil;
 
 import java.lang.reflect.Field;
@@ -52,7 +52,7 @@ public class BeanFactory {
             aspectMap.put(a.pointCut(), (Aspect) o);
             return a;
         } else {
-            Object proxy = new JdkDynamicProxy(o, aspectMap).createProxy();
+            Object proxy = new CglibDynamicProxy(o, aspectMap).createProxy();
             idBeanMap.put(id, proxy);
             return proxy;
         }

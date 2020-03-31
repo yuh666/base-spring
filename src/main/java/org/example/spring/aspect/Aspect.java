@@ -5,6 +5,6 @@ public interface Aspect {
 
     Class<?> pointCut();
 
-    Object around(JdkProceedingJoinPoint pjp) throws Exception;
+    Object around(ProceedingJoinPoint pjp) throws Throwable;
 
 }
